@@ -3,8 +3,8 @@
 @import 'components/link-talk.css';
 @import 'components/header-main.css';
 @import 'components/top-header.css';
-@import '';
-@import '';
+@import 'components/main-nav.css';
+@import 'components/nav-button.css';
 @import '';
 @import '';
 @import '';

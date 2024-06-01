@@ -1,0 +1,30 @@
+.nav-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+    width: 100%;
+
+    color: white;
+}
+
+
+.nav-button input{
+    position: absolute;
+    cursor: pointer;
+    left: -900000px;
+    top: -900000px;
+    opacity: 0;
+}
+
+.nav-button label{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.nav-button input + label{
+    cursor: pointer;
+}
+

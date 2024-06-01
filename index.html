@@ -27,7 +27,67 @@
         </div>
 
     </header>
-    <section style="height: 100%; background-color: #F6A7C1;">
-</section>
+    <main style="height: 100%;">
+        <section class="main-nav">
+            <nav>
+
+                <div class="nav-button" id="block-tudo">
+                    <input type="checkbox" name="tudo" id="itudo" onclick="clickTudo()">
+                    <label for="itudo">Ver tudo</label>
+                </div>
+
+                <div class="nav-button" id="block-paes">
+                    <input type="checkbox" name="paes" id="ipaes" onclick="clickPaes()">
+                    <label for="ipaes">Pães</label>
+                </div>
+
+                <div class="nav-button" id="block-salgados">
+                    <input type="checkbox" name="salgados" id="isalgados" onclick="clickSalgados()">
+                    <label for="isalgados">Salgados</label>
+                </div>
+
+            </nav>
+        </section>
+
+        <section style="height: 100%; background-color: white;">
+        </section>
+    </main>
+
+    <script>
+        var tudo = document.getElementById('block-tudo')
+        var paes = document.getElementById('block-paes')
+        var salgados = document.getElementById('block-salgados')
+
+        function clickTudo(){
+            salgados.style.background = '#f6a7c1'
+            salgados.style.color = 'white'
+            paes.style.background = '#f6a7c1'
+            paes.style.color = 'white'
+
+            tudo.style.background = '#f3d1dc'
+            tudo.style.color = '#f6a7c1'
+        }
+
+        function clickPaes(){
+            salgados.style.background = '#f6a7c1'
+            salgados.style.color = 'white'
+            tudo.style.background = '#f6a7c1'
+            tudo.style.color = 'white'
+
+            paes.style.background = '#f3d1dc'
+            paes.style.color = '#f6a7c1'
+        }
+
+        function clickSalgados(){
+            paes.style.background = '#f6a7c1'
+            paes.style.color = 'white'
+            tudo.style.background = '#f6a7c1'
+            tudo.style.color = 'white'
+
+            salgados.style.background = '#f3d1dc'
+            salgados.style.color = '#f6a7c1'
+        }
+
+    </script>
 </body>
 </html>
