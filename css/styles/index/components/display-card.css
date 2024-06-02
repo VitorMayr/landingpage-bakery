@@ -29,7 +29,7 @@
 
 .display-card > .text .title{
     flex-wrap: nowrap;
-    font-size: 3.1vw;
+    font-size: 3.5vw;
     font-weight: 500;
     text-align: left;
     color: white;
@@ -61,6 +61,7 @@
 }
 
 .display-card .sabores{
+    font-size: 3vw;
     color: white;
     font-weight: 300;
 }
