@@ -5,8 +5,8 @@
 @import 'components/top-header.css';
 @import 'components/main-nav.css';
 @import 'components/nav-button.css';
-@import '';
-@import '';
+@import 'components/section-paes.css';
+@import 'components/display-card.css';
 @import '';
 @import '';
 @import '';

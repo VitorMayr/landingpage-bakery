@@ -1,0 +1,13 @@
+.section-paes{
+    display: flex;
+    justify-content: space-between;
+
+    padding: 2vh 5vw;
+    width: 100%;
+    flex-wrap: wrap;
+    row-gap: 2vh;
+    text-align: center;
+
+    background-color: var(--color-amarelo-claro);
+}
+
