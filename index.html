@@ -85,7 +85,7 @@
                 </div>
             </div>
 
-            <div class="display-card -cardsalgados">
+            <div class="display-card -cardsalgado">
                 <img class="img" src="img/produtos/paoredondorecheado.jpg" alt="">
                 <div class="text">
                     <h2 class="title">Pão redondo rechado</h2>
@@ -116,9 +116,9 @@
         var paes = document.getElementById('block-paes')
         var salgados = document.getElementById('block-salgados')
 
-        var cardpaes = document.getElementsByClassName('div.display-card -cardpao')
-        var cardsalgados = document.getElementsByClassName('div.display-card -cardsalgados')
-        var cardbolos = document.getElementsByClassName('div.display-card -cardbolo')
+        var cardpaes = document.getElementsByClassName('display-card -cardpao')
+        var cardsalgados = document.getElementsByClassName('display-card -cardsalgado')
+        var cardbolos = document.getElementsByClassName('display-card -cardbolo')
         
         function navButPress(elem){
             elem.style.background = '#f3d1dc'
@@ -130,10 +130,26 @@
             elem.style.color = 'white'
         }
 
+        function show(elem){
+            for (let cont in elem){
+                elem.item(cont).style.display = 'flex'
+            }
+        }
+
+        function unshow(elem){
+            for (let cont in elem){
+                elem.item(cont).style.display = 'none'
+            }
+        }
+
         function clickTudo(){
             navButUnpress(salgados)
             navButUnpress(paes)
             navButPress(tudo)
+
+            show(cardsalgados)
+            show(cardpaes)
+            show(cardbolos)
         }
 
 
@@ -141,12 +157,20 @@
             navButUnpress(salgados)
             navButUnpress(tudo)
             navButPress(paes)
+
+            show(cardpaes)
+            unshow(cardbolos)
+            unshow(cardsalgados)
         }
 
         function clickSalgados(){
             navButUnpress(paes)
             navButUnpress(tudo)
             navButPress(salgados)
+
+            show(cardsalgados)
+            unshow(cardbolos)
+            unshow(cardpaes)
         }
 
     </script>
