@@ -24,7 +24,7 @@
     <header class="header-main">
         
         <div class="background">
-        <h1 class="title-main">Pães e bolos da silvana</h1>
+        <h1 class="title-main">Pães e Bolos da Silvana</h1>
         <a class="link-talk -header" href="https://wa.me/+5581984188262" target="_blank">Fale comigo</a>
         </div>
 
@@ -55,7 +55,7 @@
 
         <section class="section-paes">
 
-            <div class="display-card">
+            <div class="display-card -cardpao">
                 <img class="img" src="img/produtos/paoretosrecheio.jpg" alt="">
                 <div class="text">
                     <h2 class="title">Pão reto sem recheio</h2>
@@ -65,7 +65,7 @@
                 </div>
             </div>
 
-            <div class="display-card">
+            <div class="display-card -cardpao">
                 <img class="img" src="img/produtos/paoredondosemrecheio.jpg" alt="">
                 <div class="text">
                     <h2 class="title">Pão redondo s/recheio</h2>
@@ -75,7 +75,27 @@
                 </div>
             </div>
 
-            <div class="display-card">
+            <div class="display-card -cardpao">
+                <img class="img" src="img/produtos/paoredondorecheado.jpg" alt="">
+                <div class="text">
+                    <h2 class="title">Pão redondo rechado</h2>
+                    <p class="sabores">Queijo<br>Frango<br>Calabresa<br>Frango com requeijão(+5,00)</p>
+                    <p class="preco">30,00</p>
+                    <a class="click" href="https://wa.me/+5581984188262">Eu quero</a>
+                </div>
+            </div>
+
+            <div class="display-card -cardsalgados">
+                <img class="img" src="img/produtos/paoredondorecheado.jpg" alt="">
+                <div class="text">
+                    <h2 class="title">Pão redondo rechado</h2>
+                    <p class="sabores">Queijo<br>Frango<br>Calabresa<br>Frango com requeijão(+5,00)</p>
+                    <p class="preco">30,00</p>
+                    <a class="click" href="https://wa.me/+5581984188262">Eu quero</a>
+                </div>
+            </div>
+
+            <div class="display-card -cardbolo">
                 <img class="img" src="img/produtos/paoredondorecheado.jpg" alt="">
                 <div class="text">
                     <h2 class="title">Pão redondo rechado</h2>
@@ -96,34 +116,37 @@
         var paes = document.getElementById('block-paes')
         var salgados = document.getElementById('block-salgados')
 
-        function clickTudo(){
-            salgados.style.background = '#f6a7c1'
-            salgados.style.color = 'white'
-            paes.style.background = '#f6a7c1'
-            paes.style.color = 'white'
-
-            tudo.style.background = '#f3d1dc'
-            tudo.style.color = '#f6a7c1'
+        var cardpaes = document.getElementsByClassName('div.display-card -cardpao')
+        var cardsalgados = document.getElementsByClassName('div.display-card -cardsalgados')
+        var cardbolos = document.getElementsByClassName('div.display-card -cardbolo')
+        
+        function navButPress(elem){
+            elem.style.background = '#f3d1dc'
+            elem.style.color = '#f6a7c1'
         }
 
-        function clickPaes(){
-            salgados.style.background = '#f6a7c1'
-            salgados.style.color = 'white'
-            tudo.style.background = '#f6a7c1'
-            tudo.style.color = 'white'
+        function navButUnpress(elem){
+            elem.style.background = '#f6a7c1'
+            elem.style.color = 'white'
+        }
 
-            paes.style.background = '#f3d1dc'
-            paes.style.color = '#f6a7c1'
+        function clickTudo(){
+            navButUnpress(salgados)
+            navButUnpress(paes)
+            navButPress(tudo)
+        }
+
+
+        function clickPaes(){
+            navButUnpress(salgados)
+            navButUnpress(tudo)
+            navButPress(paes)
         }
 
         function clickSalgados(){
-            paes.style.background = '#f6a7c1'
-            paes.style.color = 'white'
-            tudo.style.background = '#f6a7c1'
-            tudo.style.color = 'white'
-
-            salgados.style.background = '#f3d1dc'
-            salgados.style.color = '#f6a7c1'
+            navButUnpress(paes)
+            navButUnpress(tudo)
+            navButPress(salgados)
         }
 
     </script>
